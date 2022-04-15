@@ -1,4 +1,4 @@
-﻿// Прверяем чет-нечет
+﻿// Проверяем чет-нечет
 Console.Write("Введите любое число: ");
 double a = Convert.ToDouble(Console.ReadLine());
 
