@@ -6,20 +6,11 @@ int numbers = 1;
 
 Console.Write("Все чётные числа с 1 по загаданное число: ");
 
-while (numbers < N) 
+while (numbers <= N) 
 {
     if (numbers % 2 == 0)
     {
-        Console.Write($"{numbers}, ");
+        Console.Write($"{numbers}  ");
     }
     numbers++;
-}
-
-if (N % 2 == 0)
-{
-    Console.Write($"{N}.");
-}
-else
-{
-    Console.Write(".");
 }
