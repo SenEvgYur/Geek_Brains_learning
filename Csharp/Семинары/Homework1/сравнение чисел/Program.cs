@@ -1,4 +1,5 @@
-﻿Console.Write("Введите 1-е число: ");
+﻿// сравнение чисел
+Console.Write("Введите 1-е число: ");
 double a = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите 2-е число: ");
 double b = Convert.ToDouble(Console.ReadLine());
