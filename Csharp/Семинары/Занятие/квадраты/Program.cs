@@ -9,7 +9,7 @@ if (N < 0)
 else
 {
     int numbers = 1;
-    Console.WriteLine("Все квадраты числел с 1 по загаданное число: ");
+    Console.WriteLine("Все квадраты чисел с 1 по загаданное число: ");
     while (numbers <= N)
     {
         Console.WriteLine(Math.Pow(numbers, 2));
