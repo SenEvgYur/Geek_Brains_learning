@@ -15,7 +15,7 @@ if (N < 0)
 else
 {
     int numbers = 1;
-    Console.WriteLine("Все кубы чисел с 1 по загаданное число: ");
+    Console.WriteLine($"Все кубы чисел с 1 по {N}: ");
     while (numbers <= N)
     {
         Console.WriteLine(Math.Pow(numbers, 3));

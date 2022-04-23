@@ -17,4 +17,4 @@ if (x / 10000 == x % 10)
 else
 {
     System.Console.WriteLine("не палиндром");
-}
+} 
