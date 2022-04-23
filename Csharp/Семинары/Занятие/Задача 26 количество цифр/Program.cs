@@ -2,7 +2,7 @@
 Console.Clear();
 Console.WriteLine("Введите число: ");
 int x = int.Parse(Console.ReadLine());
- if (x < 0)
+if (x < 0)
 {
     x = -x;
 }
