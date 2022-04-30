@@ -12,6 +12,9 @@ int B = int.Parse(Console.ReadLine());
 int C = A;
 for (int i = 1; i < B; i++)
 {
+    Console.Write($"{A} * {C} = ");
     C = C * A;
+    Console.Write(C);
+    System.Console.WriteLine();
 }
-System.Console.WriteLine($"Ответ: {A} в степени {B} = {C}");
+Console.WriteLine($"Ответ: число {A} в степени {B} = {C}");

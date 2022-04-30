@@ -15,7 +15,6 @@ void Print(int [] array)
 }
 Console.Clear();
 int[] mass = new int[10];
-// Print (mass);
 for (int i = 0; i < mass.Length; i++)
 {
     mass[i] = new Random().Next (0, 200);
