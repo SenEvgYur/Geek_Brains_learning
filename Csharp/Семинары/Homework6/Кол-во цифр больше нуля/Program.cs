@@ -12,4 +12,4 @@ for (int i = 0; i < mass.Length; i++)
     int some  = int.Parse(mass[i]);
     if (some > 0) count++;
 }
-System.Console.WriteLine(count);
+System.Console.WriteLine($"Ответ: количество цифр больше нуля = {count}");
