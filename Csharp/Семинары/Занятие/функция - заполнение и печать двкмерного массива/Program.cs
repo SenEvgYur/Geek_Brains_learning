@@ -1,8 +1,7 @@
 ﻿// Функция по заполнению и печати двумерного массива
 
 
-// Печать двумерного массива
-void PrintArray(int[,] arr)
+void PrintArray(int[,] arr)  // функция печати двумерного массива
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -16,8 +15,7 @@ void PrintArray(int[,] arr)
 }
 
 
-// Заполнение двумерного массива
-void FillArray(int[,] arr)
+void FillArray(int[,] arr) // функция заполнения двумерного массива
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {

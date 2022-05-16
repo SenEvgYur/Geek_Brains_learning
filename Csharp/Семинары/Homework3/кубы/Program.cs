@@ -4,11 +4,12 @@ Console.Write("Введите любое число: ");
 int N = Convert.ToInt32(Console.ReadLine());
 if (N < 0)
 {
-    int numbers = N;
-    Console.WriteLine("Все кубы числа по модулю: ");
-    while (numbers <= Math.Abs(N))
+    N = -N;
+    int numbers = 1;
+    Console.WriteLine("Все кубы числел с 1 по загаданное число: ");
+    while (numbers <= N)
     {
-        Console.WriteLine(Math.Pow(numbers, 3));
+        Console.WriteLine(Math.Pow(numbers, -3));
         numbers++;
     }
 }
