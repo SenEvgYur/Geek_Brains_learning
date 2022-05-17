@@ -32,20 +32,20 @@ Console.Write("Введите количество строк в массиве:
 int m = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов в массиве: ");
 int n = int.Parse(Console.ReadLine());
-int[,] massive = new int[m, n];
+int[,] massive = new int[m, n]; // объявляем массив
 FillArray(massive);
 PrintArray(massive);
-int summa;
-double averageColumns;
-for (int i = 0; i < massive.GetLength(0); i++)
+double summa; // объявляем сумму
+double averageColumns;  // // объявляем cреднее значение
+for (int i = 0; i < massive.GetLength(1); i++)  // включаем перебор массива для учёта столбцов
 {
     summa = 0;
     averageColumns = 0;
-    for (int j = 0; j < massive.GetLength(1); j++)
+    for (int j = 0; j < massive.GetLength(0); j++)
     {
-        summa += massive[j, i];   
+        summa += massive[j, i];   // меняем местами индексы строк и столбца
     }
     averageColumns = summa/m;
-    Console.Write($"Среднее значение столбца под индексом {i} равно {averageColumns}");
+    Console.Write($"Среднее значение столбца {i} равно {averageColumns}");
     Console.WriteLine();
 }
