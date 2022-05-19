@@ -37,3 +37,16 @@ int n = int.Parse(Console.ReadLine());
 int[,] massive = new int[m, n]; // объявляем массив
 FillArray(massive);
 PrintArray(massive);
+Console.Write("Введите индекс строки в массиве: "); // запрашиваем у пользователя индекс строки
+int m1 = int.Parse(Console.ReadLine()!);
+Console.Write("Введите индекс столбца в массиве: "); // запрашиваем у пользователя индекс столбца
+int n1 = int.Parse(Console.ReadLine()!);
+Console.WriteLine();
+if (m1 >= 0 && m1 <= m - 1) // задаём первую проверку на индекс строки
+{
+    if (n1 >= 0 && n1 <= n - 1) // задаём вторую проверку на индекс столбца
+    {
+        Console.WriteLine($"Ответ: искомое число = {massive[m1, n1]}");
+    }
+}
+else Console.WriteLine($"Ответ: нет числа с таким индексом");
