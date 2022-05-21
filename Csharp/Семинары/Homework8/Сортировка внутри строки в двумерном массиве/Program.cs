@@ -24,13 +24,23 @@ void FillArray(int[,] arr) // функция заполнения двумерн
 }
 Console.Clear();
 Console.Write("Введите количество строк в массиве: ");
-int m = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine()!);
 Console.Write("Введите количество столбцов в массиве: ");
-int n = int.Parse(Console.ReadLine());
+int n = int.Parse(Console.ReadLine()!);
 int[,] massive = new int[m, n]; // объявляем массив
 FillArray(massive);
 PrintArray(massive);
 int temp; // вводим временную переменную для сортировки
-
-
+for (int i = 0; i < m; i++)
+{
+    for (int j = 0; j < n-1; j++)
+    {
+        temp = massive[i, j];
+        if (massive[i, j] > massive[i, j+1])
+        {
+            massive[i, j] = massive[i, j+1];
+            massive[i, j+1] = temp;
+        }
+    }
+}
 PrintArray(massive);
