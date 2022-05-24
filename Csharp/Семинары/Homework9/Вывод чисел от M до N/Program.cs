@@ -8,34 +8,51 @@ Console.Write("Введите число M: ");
 int M = int.Parse(Console.ReadLine()!);
 Console.Write("Введите число N: ");
 int N = int.Parse(Console.ReadLine()!);
-if (M == N)
-{
-    Console.WriteLine($"Ответ: числа в промежутке M до N = {M}");
-}
-if (M < N)
-{
-    Console.WriteLine("Ответ: числа в промежутке M до N = ");
-    for (int i = M; i <= N; i++)
-    {
-       Console.Write(i + " ");
-    }
-}
-if (N < M)
-{
-    Console.WriteLine("Ответ: числа в промежутке M до N = ");
-    for (int i = N; i <= M; i++)
-    {
-       Console.Write(i + " ");
-    }
-}
-
-// void Recursion(int n, int m) решение через рекурсию
+// if (M == N)
 // {
-//     if (m > n)
-//     {
-//         return;
-//     }
-//     Console.Write(m + " ");
-//     Recursion(n, m + 1);
+//     Console.WriteLine($"Ответ: числа в промежутке M до N = {M}");
 // }
-// Recursion(N, M);
+// if (M < N)
+// {
+//     Console.WriteLine("Ответ: числа в промежутке M до N = ");
+//     for (int i = M; i <= N; i++)
+//     {
+//        Console.Write(i + " ");
+//     }
+// }
+// if (M > N)
+// {
+//     Console.WriteLine("Ответ: числа в промежутке M до N = ");
+//     for (int i = M; i >= N; i--)
+//     {
+//        Console.Write(i + " ");
+//     }
+// }
+
+void Recursion(int n, int m) // решение через рекурсию
+{
+    if (m > n)
+    {
+        if (m < n)
+        {
+
+            return;
+        }
+        Console.Write(m + " ");
+        Recursion(n, m - 1);
+    }
+    if (m < n)
+    {
+        if (m > n)
+        {
+            return;
+        }
+        Console.Write(m + " ");
+        Recursion(n, m + 1);
+    }
+    if ( m == n )
+    {
+        Console.Write(m + " ");
+    }
+}
+Recursion(N, M);
