@@ -2,7 +2,26 @@
 // рекурсии. Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 29
 Console.Clear();
-Console.Write("Введите число m: ");
-int m = int.Parse(Console.ReadLine()!);
-Console.Write("Введите число n: ");
-int n = int.Parse(Console.ReadLine()!);
+Console.Write("Введите число M: ");
+int M = int.Parse(Console.ReadLine()!);
+Console.Write("Введите число N: ");
+int N = int.Parse(Console.ReadLine()!);
+
+int Ackerman(int m, int n)
+{
+    if (m == 0)
+    {
+        return n + 1;
+    }
+    else if ((m > 0) && (n == 0))
+    {
+        return Ackerman(m - 1, 1);
+    }
+    else if ((m > 0) && (n > 0))
+    {
+        return Ackerman(m - 1, Ackerman(m, n - 1));
+    }
+    else return n + 1;
+}
+Console.Write("A(M,N) = ");
+Console.WriteLine(Ackerman(M, N));
