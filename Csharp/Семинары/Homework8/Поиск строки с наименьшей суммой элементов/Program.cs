@@ -1,5 +1,5 @@
-﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая
-// упорядочит по убыванию элементы каждой строки двумерного массива.
+﻿// Задача 56: Задайте прямоугольный двумерный массив. Напишите
+// программу, которая будет находить строку с наименьшей суммой элементов.
 void PrintArray(int[,] arr)  // функция печати двумерного массива
 {
     for (int i = 0; i < arr.GetLength(0); i++)
@@ -22,28 +22,41 @@ void FillArray(int[,] arr) // функция заполнения двумерн
         }
     }
 }
+
 Console.Clear();
 Console.Write("Введите количество строк в массиве: ");
 int m = int.Parse(Console.ReadLine()!);
 Console.Write("Введите количество столбцов в массиве: ");
 int n = int.Parse(Console.ReadLine()!);
+
 int[,] massive = new int[m, n]; // объявляем массив
 FillArray(massive);
 PrintArray(massive);
-int temp; // вводим временную переменную для сортировки
-for (int i = 0; i < massive.GetLength(0); i++)
+
+int Sum(int[,] arr)
 {
-    for (int j = 0; j < massive.GetLength(1); j++)
+    int sum = 0;
+    int minSum = 0;
+    int minNum = 0;
+    for (int m = 0; m < arr.GetLength(0); m++)
     {
-        for (int k = 0; k < massive.GetLength(1) - j - 1; k++)
+        for (int n = 0; n < arr.GetLength(1); n++)
         {
-            if (massive[i, k] < massive[i, k+1])
+            if (m == 0) 
             {
-                temp = massive[i, k];
-                massive[i, k] = massive[i, k+1];
-                massive[i, k+1] = temp;
+                sum += arr[m, n];
+                minSum += arr[m, n]; 
             }
+            else sum += arr[m, n]; 
         }
+        if (sum < minSum)
+        {
+            minSum = sum;
+            minNum = m;
+        }
+        sum = 0;
     }
+    return minNum;
 }
-PrintArray(massive);
+Console.WriteLine();
+Console.WriteLine("Ответ: наименьшая сумма элементов в строке с индексом " + Sum(massive));
